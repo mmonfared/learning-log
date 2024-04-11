@@ -68,11 +68,11 @@ and edit existing entries.
 
     `learning_logs/views.py`
     ```python
-        from django.shortcuts import render
+    from django.shortcuts import render
 
-          def index(request):
-        """The home page for Learning Log."""
-            return render(request, 'learning_logs/index.html')
+    def index(request):
+     """The home page for Learning Log."""
+        return render(request, 'learning_logs/index.html')
     ```
 
 3. Writing Templates
