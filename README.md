@@ -87,3 +87,4 @@ and edit existing entries.
 ### ToDo Practice 1: Page 421 > Create Blog
 ### ToDo Practice 2: Page 428 > Add authentication to blog
 ### ToDo Practice 3: Page 436 > 19.5 blog protection
+### ToDo Practice 4: Page 447 > 20.2 stylish blog
