@@ -83,3 +83,7 @@ and edit existing entries.
 
         <p>Learning Log helps you keep track of your learning, for any topic you're learning about.</p>
     ```
+
+### ToDo Practice 1: Page 421 > Create Blog
+### ToDo Practice 2: Page 428 > Add authentication to blog
+### ToDo Practice 3: Page 436 > 19.5 blog protection
