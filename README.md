@@ -1,5 +1,12 @@
 ## Learning Log Web Application 
 
+<p align="center">
+  <img src="https://github.com/mmonfared/learning-log/blob/master/screenshot.png" alt="Learning Log" />
+</p>
+
+#### "Learning Log" is a full-stack django project which is an exercise included in the book [Python Crash Course](https://nostarch.com/python-crash-course-3rd-edition). 
+
+### Requirement short Specification: 
 We’ll write a web app called Learning Log that allows users to
 log the topics they’re interested in and to make journal entries as
 they learn about each topic. The Learning Log home page will
@@ -7,84 +14,30 @@ describe the site and invite users to either register or log in. Once
 logged in, a user can create new topics, add new entries, and read
 and edit existing entries.
 
-### Quick Note:
-`python -m venv venv` # create python environment
+### Features:
+- Fullstack (Front+Back) with Django 5
+- Styled with Bootstrap 4
+- Authorization and Authentication
+- Admin Panel 
+- SQLite3 Database 
 
-`source venv/bin/activate` # activate python env
 
-`pip install django` # install django
+### How to use:
+1. Create a python virtual environment: `python -m venv venv` 
+2. Activate virtual env: `source venv/bin/activate` 
+3. Install requirements: `pip install -r requirements.txt`
+4. Migrate database: `python manage.py migrate` 
+5. Create a super user (admin): `python manage.py createsuperuser`
+6. Run project: `python manage.py runserver`
+7. Open application:
+   - **App address** : `localhost:8000`
+   - **Admin panel address**: `localhost:8000/admin`
 
-`django-admin startproject project-name .` # create django project
+### Let's connect: 
+I'm **Mohammad**, A Test Automation Architect who actively shares his knowledge in:
 
-`python manage.py migrate` # initialize database
+[Website](https://monfared.io) | [Blog](https://blog.monfared.io) | [LinkedIn](https://www.linkedin.com/in/mohammad-monfared/) | [YouTube Courses](https://www.youtube.com/automationcamp) | [StackOverFlow](https://stackoverflow.com/users/7302505/mohammad-monfared) | [Github](https://github.com/mmonfared) 
 
-`python manage.py runserver` # to view the project
 
-`python manage.py startapp app-name` # create app
 
-// Add models > add app to setting (INSTALLED list) > import model to admin.py
 
-`python manage.py makemigrations app-name` # create migrations for app
-
-`python manage.py migrate` # migrate database
-
-`python manage.py createsuperuser` # to create admin 
-
-`python manage.py shell` # open django shell 
-
-// >>> from app-name.models import ModelName
-
-// >>> ModelName.objects.all()
-
-==== Add pages
-1. Define URLs
-   1.
-        `learning_log/urls.py`
-        ```python
-        from django.contrib import admin
-        from django.urls import path, include
-        
-        urlpatterns = [
-            path('admin/', admin.site.urls),
-            path('', include('learning_logs.urls'))
-        ]
-        ```
-   2. `learning_logs/urls.py` (add new file)
-      ```python
-        """Define URLS patterns for learning_logs."""
-        
-        from django.urls import path
-        
-        from . import views
-        
-        app_name = 'learning_logs'
-        urlpatterns = [
-            # Home page
-            path('', views.index, name='index')
-        ]
-        ```
-
-2. Write Views
-
-    `learning_logs/views.py`
-    ```python
-    from django.shortcuts import render
-
-    def index(request):
-     """The home page for Learning Log."""
-        return render(request, 'learning_logs/index.html')
-    ```
-
-3. Writing Templates
-
-    `learning_logs/templates/learning_logs/index.html` (create the nested directory like this)
-    ```html
-        <h2>Learning Log</h2>
-
-        <p>Learning Log helps you keep track of your learning, for any topic you're learning about.</p>
-    ```
-
-### ToDo Practice 1: Page 421 > Create Blog
-### ToDo Practice 2: Page 428 > Add authentication to blog
-### ToDo Practice 3: Page 436 > 19.5 blog protection
-### ToDo Practice 4: Page 447 > 20.2 stylish blog
